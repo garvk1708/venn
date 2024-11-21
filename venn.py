@@ -1,4 +1,4 @@
-from matplotlib_venn import venn2, venn2_circles, venn3, venn3_circles  # Remove deprecated venn2_unweighted
+from matplotlib_venn import venn2, venn2_circles, venn3, venn3_circles  
 import matplotlib_venn as venn
 from matplotlib import pyplot as plt
 
@@ -23,9 +23,8 @@ while True:
             tempsetb = int(input(f"Enter element {i+1} in set B: "))
             setBB.add(tempsetb)
         
-        venn2([setAA, setBB], set_labels=('Set A', 'Set B'))  # Use venn2 instead of venn2_unweighted
-        plt.title("Venn Diagram for Set A and Set B")  # Add a meaningful title
-        plt.show()
+        venn2([setAA, setBB], set_labels=('Set A', 'Set B'))  
+        plt.title("Venn Diagram for Set A and Set B")  
 
     def myvenn3():
         seta_ele = int(input("Enter the number of elements you want in your SET A: "))
@@ -44,7 +43,7 @@ while True:
             tempsetc = int(input(f"Enter element {i+1} in set C: "))
             setCC.add(tempsetc)
         
-        venn3([setAA, setBB, setCC], set_labels=('Set A', 'Set B', 'Set C'))  # Use venn3 instead of venn3_unweighted
+        venn3([setAA, setBB, setCC], set_labels=('Set A', 'Set B', 'Set C'))  
         plt.title("Venn Diagram for Set A, Set B, and Set C")
         plt.show()
 
@@ -80,7 +79,7 @@ while True:
             print("A Δ B Δ C = ", setAA ^ setBB ^ setCC)
             plt.title("A Δ B Δ C")
 
-    # Main logic to execute Venn diagram and set operations
+    
     if number_set == 2:
         myvenn2()
         if function_set == "int":
